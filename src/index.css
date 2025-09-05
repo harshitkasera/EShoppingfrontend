@@ -1,0 +1,875 @@
+.head{
+  background-color: white;
+  font-family: poppins;
+  margin-left: 10px;
+}
+
+body {
+  background: #8662e234;
+  color: #333;
+}
+
+/* Cart icon styling */
+.fa-shopping-cart {
+  font-size: 1.2rem;
+}
+
+/* Cart item count bubble */
+.zero {
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 1px 6px;
+  /* position: absolute; */
+  top: -8px;
+  right: 25px;
+  margin-top: -25px;
+  margin-left: -5px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar h3 {
+    margin-bottom: 10px;
+  }
+
+  .navbar .btn {
+    margin: 8px 0;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h3 {
+    font-size: 1.2rem;
+  }
+
+  .fa-shopping-cart {
+    font-size: 1rem;
+  }
+
+  .zero {
+    font-size: 0.7rem;
+    padding: 1px 4px;
+  }
+}
+
+
+/* ====== Home Page ====== */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.image {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.box button {
+  margin-top: 10px;
+background: #35383a;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.box button:hover {
+  background: #78828c;
+  transform: scale(1.05);
+}
+
+/* ====== Cart Page ====== */
+.cart-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.cart-img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cart-item {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.cart-price span {
+  font-weight: bold;
+  color: #193620;
+}
+
+.cart-btn button {
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+/* ====== Sidebar (Admin) ====== */
+.sidebar {
+  width: 220px;
+  background: #007bff;
+  height: 100vh;
+  padding: 20px;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateX(5px);
+}
+
+/* ====== Add Product Form ====== */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.form input {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.form button {
+  margin-top: 15px;
+  background: #2db04c;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+/* ====== View Product Table ====== */
+table {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #07090bbd;
+  color: white;
+}
+
+tr:hover {
+  background: #f1f1f1;
+}
+
+.imag {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .cart-div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-img img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .form {
+    width: 90%;
+  }
+}
+
+/* ====== Add Product Form Styling ====== */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f6fa;
+  padding: 20px;
+}
+
+.add-box {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+.add-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.add-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-box label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.add-box input[type="text"],
+.add-box input[type="number"],
+.add-box input[type="file"] {
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.add-box input[type="text"]:focus,
+.add-box input[type="number"]:focus,
+.add-box input[type="file"]:focus {
+  border-color: #3e4246;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+}
+
+.add-box button {
+  padding: 12px;
+  background: #35383a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-box button:hover {
+  background: #575f68;
+  transform: translateY(-1px);
+}
+
+.add-box button:active {
+  transform: scale(0.98);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .add-box {
+    padding: 20px;
+  }
+
+  .add-box h2 {
+    font-size: 20px;
+  }
+}
+.v-btn{
+  background-color: rgba(0, 0, 255, 0.69);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+}
+.v-btn-d{
+  margin: 5px;
+  background-color: rgba(255, 0, 0, 0.762);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+
+}
+/* ====== Update Product Form Styling ====== */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f6fa;
+  padding: 20px;
+}
+
+.v-hh{
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #9d3a3a;
+  font-weight: 600;
+}
+
+.form-container form {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"] {
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="number"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+}
+
+/* ===== Buttons ===== */
+.form-container button {
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button[type="submit"] {
+  background: #48a65e;
+  color: #fff;
+}
+
+.form-container button[type="submit"]:hover {
+  background: #218838;
+}
+
+.form-container button[type="button"] {
+  background: #dc3545;
+  color: #fff;
+}
+
+.form-container button[type="button"]:hover {
+  background: #b52a37;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .form-container form {
+    padding: 20px;
+  }
+
+  .form-container h2 {
+    font-size: 20px;
+  }
+}
+
+
+.fanimate{
+  /* opacity: 0.7; */
+  background-image: url(../public/images/home.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.animate{
+  display: flex;
+  height: 502px;
+  justify-content: center;
+  align-items: center;
+  opacity: 2;
+  color: black;
+}
+.fbtn{
+ padding-inline: 20px;
+ font-size: 26px;
+ background-color: rgb(46, 61, 232);
+ color: white;
+ border: none;
+ border-radius: 30px;
+}
+.navbar{
+  width: 100%; 
+  margin: 0px;
+    background-color: rgb(52, 24, 190);
+  background: rgba(33, 13, 45, 0.653); /* dark overlay */
+
+
+
+}
+
+.container-fluid{
+  width: 100%;
+  background-color: rgba(203, 199, 225, 0.548);
+  
+}
+.navbar-brand{
+  color: rgba(36, 34, 34, 0.649);
+  font-size: 30px;
+}
+.nav-link{
+  background-color: white;
+  width: 55px;
+  border-radius: 20px;
+}
+.nav-liink{
+  color: rgb(58, 45, 102);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+}
+.dd {
+
+  min-width: 0vw;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 73vw;
+  align-items: center;
+  
+}
+.fanimate h1{
+  color: white;
+}
+
+
+
+
+
+
+
+/* ================= */
+
+/* ====== Hero Section (fanimate) ====== */
+.fanimate {
+  background: url("../public/images/home.webp") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+   color: #fff;
+  padding: 20px;
+  position: relative;
+}
+
+/* Overlay effect for better readability */
+.fanimate::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.334); /* dark overlay */
+  z-index: 0;
+  border-radius: 0;
+}
+
+/* Make content appear above overlay */
+.fanimate > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headings */
+.fanimate h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 15px 0;
+  line-height: 1.3;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Button */
+.fbtn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.175);
+}
+
+.fbtn:hover {
+  background: #ff4757;
+  transform: scale(1.05);
+}
+
+/* Button wrapper animation */
+.animate {
+  margin-top: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Simple fade animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fanimate h1 {
+    font-size: 1.8rem;
+  }
+  .fbtn {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+}
+     
+.foot{
+ height: 250px;
+}
+.foot p{
+  color: white;
+}
+
+footer.foot {
+  background-color: #161025;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer.foot h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+   color: #00C9FF;
+
+}
+.image{
+  height: 130px;
+}
+footer.foot p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.full-fot {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.icon-fot {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.icon-fot i,
+.icon-fot .icon {
+  font-size: 1.3rem;
+  color:  #00C9FF;
+  transition: 0.3s ease;
+}
+
+.icon-fot i:hover,
+.icon-fot .icon:hover {
+  color: #fff;
+}
+
+a.fot {
+  text-decoration: none;
+  color: #ddd;
+  gap: 10px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+a.fot:hover {
+  color: #00C9FF;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .full-fot {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .icon-fot {
+    margin: 0 20px;
+  }
+}
+
+
+
+
+/* =================================== */
+
+
+/* ====== Hero Section (fanimate) ====== */
+.fanimate {
+  background: url("../public/images/home.webp") no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  /* min-width: 50vh; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay */
+.fanimate::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+/* Text typing effect */
+.fanimate h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 15px 0;
+  line-height: 1.3;
+  color: #fff;
+  animation: typing 4s steps(30, end) infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ffffff;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Button with gradient hover */
+.fbtn {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fbtn:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Product Cards ===== */
+.box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.box:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.box img {
+  max-width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  transition: 0.5s ease;
+}
+
+.box:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== Navbar Hover Animation ===== */
+.nav-link {
+  position: relative;
+  color: #3a5d5f;
+  transition: 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00C9FF;
+  transition: 0.4s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== Sidebar ===== */
+.sidebar a {
+  position: relative;
+  transition: all 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateX(8px);
+}
+
+.sidebar a::before {
+  content: "→";
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.sidebar a:hover::before {
+  left: -10px;
+  opacity: 1;
+}
+
+/* ===== Footer Icons with Glow ===== */
+.icon-fot i,
+.icon-fot .icon {
+  font-size: 1.5rem;
+  color: #00C9FF;
+  transition: 0.3s ease;
+}
+
+.icon-fot i:hover,
+.icon-fot .icon:hover {
+  color: #fff;
+  text-shadow: 0 0 12px #00C9FF, 0 0 24px #00C9FF;
+}
+
+/* Footer links */
+a.fot {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+a.fot:hover {
+  color: #00C9FF;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,33 @@
+/* th,  td{
+    border: 2px solid;
+    border-collapse: collapse;
+    text-align: center;
+    
+}
+.imag{
+    width: 90px;
+    height: 90px;
+} */
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.imag {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+}

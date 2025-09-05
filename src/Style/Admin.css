@@ -1,0 +1,28 @@
+
+
+.side {
+  width: 200px;
+  float: left;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.ad-btn, .add-btn {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.ad-btn:hover, .add-btn:hover {
+  background-color: #0056b3;
+}
