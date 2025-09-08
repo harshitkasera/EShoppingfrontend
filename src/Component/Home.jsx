@@ -34,8 +34,8 @@ const Home = ({ handleitem }) => {
               <h1>{items.id}</h1>
               <div>
                 {console.log(items.img)}
-                <img className='image' src={`http://localhost:9800/upload/${items.img}`} alt="" />
-                {console.log(`http://localhost:9800/${items.img}`)}
+                <img className='image' src={`https://eshopping-1.onrender.com/upload/${items.img}`} alt="" />
+                {console.log(`https://eshopping-1.onrender.com/${items.img}`)}
               </div>
               <h4>{items.name}</h4>
               <p>{items.desc}</p>

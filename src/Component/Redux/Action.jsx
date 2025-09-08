@@ -4,7 +4,7 @@ const Action = () =>async(dispatch)=>{
 
     try {
 
-        const product = await axios.get('http://localhost:9800/get')
+        const product = await axios.get('https://eshopping-1.onrender.com/get')
         const res = product.data
 console.log(res)
         dispatch({type:'success',payload:res})

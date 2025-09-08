@@ -19,7 +19,7 @@ const ViewProduct = () => {
   }, [])
 
   const getData = async () => {
-    const res = await axios.get('http://localhost:9800/get')
+    const res = await axios.get('https://eshopping-1.onrender.com/get')
     setProducts(res.data)
   }
 
@@ -30,7 +30,7 @@ const ViewProduct = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:9800/delete/${id}`)
+      await axios.delete(`https://eshopping-1.onrender.com/delete/${id}`)
       getData()
     } catch (error) {
       console.error("Delete failed:", error)
@@ -52,7 +52,7 @@ const ViewProduct = () => {
 
   const handleUpdateSubmit = async (e) => {
     e.preventDefault()
-    await axios.put(`http://localhost:9800/update/${editId}`, productData)
+    await axios.put(`https://eshopping-1.onrender.com/update/${editId}`, productData)
     getData()
     setFormVisible(false)
     setEditId(null)
@@ -82,11 +82,11 @@ const ViewProduct = () => {
               <td>{item._id}</td>
               <td>
                 <img
-                  src={`http://localhost:9800/upload/${item.img}`}
+                  src={`https://eshopping-1.onrender.com/upload/${item.img}`}
                   alt={item.name}
                   width="100"
                 />
-                {console.log(`http://localhost:9800/upload/${item.img}`)}
+                {console.log(`https://eshopping-1.onrender.com/upload/${item.img}`)}
               </td>
               <td>{item.name}</td>
               <td>{item.desc}</td>

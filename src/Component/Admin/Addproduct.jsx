@@ -40,7 +40,7 @@ const AddProduct = ({ onSuccess }) => {
     data.append("price", formData.price);
 
     try {
-      const res = await axios.post("http://localhost:9800/add", data, {
+      const res = await axios.post("https://eshopping-1.onrender.com/add", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
