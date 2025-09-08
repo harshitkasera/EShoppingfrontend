@@ -46,7 +46,7 @@ const Cart = ({ cart, setcart }) => {
                 cart?.map((item, ind) => (
                     <div className='cart-div' key={ind}>
                         <div className='cart-img'>
-                            <img src={`http://localhost:9800/upload/${item.img}`}/>
+                            <img src={`https://eshopping-1.onrender.com/upload/${item.img}`}/>
                         </div>
                         <div className='cart-item'>
                             <span>{item.name}</span>
