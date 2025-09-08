@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "axios": "^1.11.0",
-    "gsap": "^3.13.0",
     "postprocessing": "^6.37.7",
     "prop-types": "^15.8.1",
     "react": "^19.1.0",

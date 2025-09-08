@@ -1,27 +1,5 @@
-// import React from 'react'
-// import Home from './Component/Home'
-// // import './App.css'
-// import Navbar from './Component/Navbar'
-// import { Routes, Route, data } from 'react-router-dom'
-// function App() {
- 
 
-//   return (
-  
-//       <div>
-//   <Navbar/>
-//   <Routes>
-//     <Route path="/" element={<Home data={data}/>}></Route>
-//   </Routes>
-//       </div>
-     
-  
-//   )
-// }
 
-// export default App
-
- 
 import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './Component/Navbar'
